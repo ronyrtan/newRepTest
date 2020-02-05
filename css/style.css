@@ -1,0 +1,451 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Apple Legacy Chevron","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+/* Left Nav Bar */
+
+@media only screen and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
+
+  .rightPanel {
+    margin-left: 0 !important;
+  }
+
+  .bodySectionCont, .slideIconCont {
+    flex-direction: column;
+  }
+
+  .columnBody {
+    padding: 0 20px !important;
+  }
+
+  .stayCont p {
+    padding-left: 20px;
+  }
+}
+
+nav {
+  position: fixed;
+  background: white;
+  width: 160px;
+  height: 100%;
+  overflow: scroll;
+}
+
+nav .logo {
+  text-align: center;
+  padding: 5px 0 50px;
+}
+
+.fixedMenu ul {
+  list-style: none;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 110px;
+
+  font-family: proxima-nova, sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.fixedMenu ul li {
+  padding-bottom: 0px;
+  padding-top: 19px;
+  margin-bottom: 10px;
+  line-height: 28px;
+}
+
+.fixedMenu a {
+  color: #999;
+  position: relative;
+  display: inherit;
+  border-bottom: 1px solid #999;
+
+  text-decoration: none;
+
+  list-style: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+
+  transition: 0.6s;
+}
+
+.fixedMenu a:hover {
+  border-bottom: 1px solid #000;
+}
+
+.fixedMenu a:hover span {
+  width: 100%;
+}
+
+.fixedMenu a span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  margin-top: 0px;
+  overflow: hidden;
+  transition: 0.6s;
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.fixedMenu a span:before {
+    content: attr(rel);
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    padding: 0;
+    color: #000;
+}
+
+/* Left Nav Bar End */
+
+
+/* Right Panel */
+
+.rightPanel {
+  position: relative;
+  background: lightgray;
+  height: 100vh;
+  margin-left: 160px;
+}
+
+/* Right Panel Header */
+
+.slide1 .slideImgBg {
+  background: #eee url("../images/HeroImage_OurServices.jpg") no-repeat;
+}
+
+.slide2 .slideImgBg {
+  background: #eee url("../images/HeroImage_BrandStrategy.jpg") no-repeat;
+}
+
+.slideImgBg {
+  height: 100vh;
+  width: 100%;
+  background-size: cover !important;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header .active {
+  height: 100% !important;
+}
+
+header section {
+  height: 0% !important;
+  transition: height 0.9s !important;
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  background-attachment: fixed;
+    background-size: 100%;
+}
+
+.navHeader {
+  position: absolute;
+  display: block;
+  right: 24px;
+  top: 40%;
+  width: 18px;
+  z-index: 10;
+}
+
+header span {
+  cursor: pointer;
+  display: inline-block;
+  background: #bbb;
+  border: 2px solid transparent;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  margin: 0 3px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.activenav {
+  background: #ee5eb6;
+}
+
+.slideContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding-left: 5vw;
+  max-width: 70vh;
+
+  box-sizing: border-box;
+
+}
+
+h2 {
+  font-family: 'FreightBig Pro';
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  font-size: 45px !important;
+  line-height: 55px;
+  color: #2c2c2c;
+  padding-bottom: .35em;
+  padding-right: 20px;
+  /* line-height: .8 !important; */
+}
+
+p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #7f7f7f;
+  line-height: 2;
+  padding-bottom: 1em;
+  padding-right: 20px;
+}
+
+.bodySection p {
+  color: #7f7f7f;
+  font-weight: 300;
+  font-size: 15px;
+  padding-right: 0;
+}
+
+.viewWorkCont {
+  position: relative;
+  width: fit-content;
+}
+
+.slideContent .viewWork {
+  color: #000;
+}
+
+a.viewWork {
+  text-decoration: none;
+  color: #000;
+  padding: 9px 0 5px;
+  border-bottom: none;
+}
+
+a.viewWork::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  content: '';
+  transition: all 0.6s ease;
+  background: #000;
+}
+
+a.viewWork:hover::after {
+  top: 0%;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.6s ease;
+}
+
+a.viewWork::after {
+  background: #000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  content: '';
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.viewWork {
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.5;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: proxima-nova, sans-serif;
+
+  letter-spacing: 3px;
+  border-bottom: 3px solid black;
+  display: inline-block;
+  padding-bottom: 2px;
+  padding-right: 0;
+}
+
+.slideIconCont {
+  display: flex;
+  text-align: center;
+  /* justify-content: space-between; */
+}
+
+.iconCont {
+  padding-right: 25px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  min-width: 130px;
+  margin-top: 30px;
+}
+
+.iconCont div {
+  margin-top: 15px;
+}
+
+/* Right Panel Header End */
+
+
+.bodySection {
+
+  position: relative;
+
+  /* height: 640px; */
+  width: 100%;
+  background: white;
+
+  z-index: 20;
+
+  border-left: 1px solid #f3f3f3;
+  background-color: white;
+
+  /* text-align: center; */
+  box-sizing: border-box;
+}
+
+.BodySectionCont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.columnBody {
+  max-width: 560px;
+  width: 100%;
+  padding: 0 47px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.columnImg img {
+  max-width: 560px;
+  width: 100%;
+}
+
+.brandDevCont .columnBody {
+  background: #fafafa;
+}
+
+
+.stayInTouch {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background: #f3f3f3;
+}
+
+.stayInTouch p {
+  font-size: 18px;
+}
+
+.stayCont {
+  max-width: 580px;
+  width: 100%;
+}
+
+.inputEmail {
+  width: 100%;
+  padding: 10px 8px 8px 15px;
+
+  border: 1px solid #DFDFDF;
+  border-radius: 5px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0px;
+  height: 52px;
+  margin-top: 27px;
+}
+
+.inputEmail::placeholder {
+  color: #DFDFDF;
+}
+
+.signUpCTA {
+  border: none;
+
+  background-color: transparent;
+  color: #000;
+  border-bottom: 3px solid #000 !important;
+  margin: auto;
+  display: block;
+  padding: 52px 0 2px;
+  text-align: left;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 3px;
+  border: 0px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+footer {
+  background: #1A191F;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+
+svg path {
+  fill: white;
+  transition: fill 0.5s ease;
+
+}
+
+svg:hover>path{
+  fill: #ff2f92;
+}
+
+.socialLinks {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #3f4046;
+  margin: 0 10px;
+}
